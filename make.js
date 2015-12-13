@@ -42,8 +42,7 @@ fs.readFile('districts.txt', 'utf8', function (err, data) {
     var districtsJson    = prettyJSON(districts);
     var districtsJsonMin = JSON.stringify(districts);
     var districtsJs      = "'use strict';\n\n"
-                         + 'var districts = ' + districtsJson + ';\n\n'
-                         + 'module.exports = districts;';
+                         + 'var chinaDistricts = ' + districtsJsonMin + ';'
     console.log(districtsJson + '\n');
     fs.writeFile(
         'districts.json',
